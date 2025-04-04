@@ -16,5 +16,10 @@ namespace IKT_projektmunka
         {
             InitializeComponent();
         }
+
+        private void openTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
