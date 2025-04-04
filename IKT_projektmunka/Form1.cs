@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,14 @@ namespace IKT_projektmunka
         private void openTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mentésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter wr = new StreamWriter("file.docx"))
+            {
+                wr.Write(richTextBox1.Text);
+            }
         }
     }
 }
