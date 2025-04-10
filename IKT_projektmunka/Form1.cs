@@ -16,6 +16,7 @@ namespace IKT_projektmunka
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void openTextToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,6 +29,24 @@ namespace IKT_projektmunka
             using (StreamWriter wr = new StreamWriter("file.docx"))
             {
                 wr.Write(richTextBox1.Text);
+            }
+        }
+
+        private void startTextWelperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void újToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
+        private void megnyitásToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
     }
