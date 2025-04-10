@@ -26,9 +26,12 @@ namespace IKT_projektmunka
 
         private void mentésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (StreamWriter wr = new StreamWriter("file.docx"))
+            saveFileDialog1.Filter = "Szöveges fájl (*.txt)|*.txt|Rich Text File (*.rtf)|*.rtf|Minden fájl (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.DefaultExt = "rtf";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                wr.Write(richTextBox1.Text);
+                System.IO.File.WriteAllText(saveFileDialog1.FileName, "Mentett szöveg");
             }
         }
 
@@ -37,16 +40,18 @@ namespace IKT_projektmunka
             Application.Exit();
         }
 
-        private void újToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            richTextBox1.Clear();
-        }
+        
 
         private void megnyitásToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            openFileDialog1.Title = "Fájl megnyitása";
+            openFileDialog1.Multiselect = false;
+            openFileDialog1.Filter = "Szöveges fájlok (*.txt)|*.txt|Minden fájl (*.*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
+                StreamReader sr = new StreamReader(openFileDialog1.FileName);
+                richTextBox1.Text = sr.ReadToEnd();
+                sr.Close();
             }
         }
     }
