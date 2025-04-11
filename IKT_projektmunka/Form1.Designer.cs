@@ -37,6 +37,15 @@
             this.megnyitásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bezárásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startTextWelperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.szerkesztésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.betűstílusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.betűszínToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visszavonásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ktgukjToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.másolásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.beillesztésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kivágásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.összesKijelöléseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beállításokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stílusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.háttérToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,18 +64,17 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.szerkesztésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.betűstílusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.betűszínToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visszavonásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ktgukjToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +116,7 @@
             this.mentésMáskéntToolStripMenuItem.Name = "mentésMáskéntToolStripMenuItem";
             this.mentésMáskéntToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
             this.mentésMáskéntToolStripMenuItem.Text = "Mentés Másként";
+            this.mentésMáskéntToolStripMenuItem.Click += new System.EventHandler(this.mentésMáskéntToolStripMenuItem_Click);
             // 
             // megnyitásToolStripMenuItem
             // 
@@ -121,6 +130,7 @@
             this.bezárásToolStripMenuItem.Name = "bezárásToolStripMenuItem";
             this.bezárásToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
             this.bezárásToolStripMenuItem.Text = "Bezárás";
+            this.bezárásToolStripMenuItem.Click += new System.EventHandler(this.bezárásToolStripMenuItem_Click);
             // 
             // startTextWelperToolStripMenuItem
             // 
@@ -131,6 +141,76 @@
             this.startTextWelperToolStripMenuItem.Size = new System.Drawing.Size(262, 22);
             this.startTextWelperToolStripMenuItem.Text = "Start Text Welper";
             this.startTextWelperToolStripMenuItem.Click += new System.EventHandler(this.startTextWelperToolStripMenuItem_Click);
+            // 
+            // szerkesztésToolStripMenuItem
+            // 
+            this.szerkesztésToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.betűstílusToolStripMenuItem,
+            this.betűszínToolStripMenuItem,
+            this.visszavonásToolStripMenuItem,
+            this.ktgukjToolStripMenuItem,
+            this.másolásToolStripMenuItem,
+            this.beillesztésToolStripMenuItem,
+            this.kivágásToolStripMenuItem,
+            this.összesKijelöléseToolStripMenuItem});
+            this.szerkesztésToolStripMenuItem.Name = "szerkesztésToolStripMenuItem";
+            this.szerkesztésToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.szerkesztésToolStripMenuItem.Text = "Szerkesztés";
+            // 
+            // betűstílusToolStripMenuItem
+            // 
+            this.betűstílusToolStripMenuItem.Name = "betűstílusToolStripMenuItem";
+            this.betűstílusToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.betűstílusToolStripMenuItem.Text = "Betűstílus";
+            this.betűstílusToolStripMenuItem.Click += new System.EventHandler(this.betűstílusToolStripMenuItem_Click);
+            // 
+            // betűszínToolStripMenuItem
+            // 
+            this.betűszínToolStripMenuItem.Name = "betűszínToolStripMenuItem";
+            this.betűszínToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.betűszínToolStripMenuItem.Text = "Betűszín";
+            // 
+            // visszavonásToolStripMenuItem
+            // 
+            this.visszavonásToolStripMenuItem.Name = "visszavonásToolStripMenuItem";
+            this.visszavonásToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.visszavonásToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.visszavonásToolStripMenuItem.Text = "Visszavonás";
+            // 
+            // ktgukjToolStripMenuItem
+            // 
+            this.ktgukjToolStripMenuItem.Name = "ktgukjToolStripMenuItem";
+            this.ktgukjToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.ktgukjToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.ktgukjToolStripMenuItem.Text = "Ismét";
+            // 
+            // másolásToolStripMenuItem
+            // 
+            this.másolásToolStripMenuItem.Name = "másolásToolStripMenuItem";
+            this.másolásToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.másolásToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.másolásToolStripMenuItem.Text = "Másolás";
+            // 
+            // beillesztésToolStripMenuItem
+            // 
+            this.beillesztésToolStripMenuItem.Name = "beillesztésToolStripMenuItem";
+            this.beillesztésToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.beillesztésToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.beillesztésToolStripMenuItem.Text = "Beillesztés";
+            // 
+            // kivágásToolStripMenuItem
+            // 
+            this.kivágásToolStripMenuItem.Name = "kivágásToolStripMenuItem";
+            this.kivágásToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.kivágásToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.kivágásToolStripMenuItem.Text = "Kivágás";
+            // 
+            // összesKijelöléseToolStripMenuItem
+            // 
+            this.összesKijelöléseToolStripMenuItem.Name = "összesKijelöléseToolStripMenuItem";
+            this.összesKijelöléseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.összesKijelöléseToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.összesKijelöléseToolStripMenuItem.Text = "Összes kijelölése";
             // 
             // beállításokToolStripMenuItem
             // 
@@ -232,13 +312,17 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton3,
             this.toolStripButton4,
-            this.toolStripButton5});
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripButton8,
+            this.toolStripButton7,
+            this.toolStripButton9,
+            this.toolStripButton3});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(24, 426);
+            this.toolStrip1.Size = new System.Drawing.Size(32, 426);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -248,8 +332,9 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 20);
             this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -257,8 +342,9 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 20);
             this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -266,8 +352,9 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 20);
             this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -275,8 +362,59 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton4.Size = new System.Drawing.Size(29, 20);
             this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton8.Text = "toolStripButton8";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton7.Text = "toolStripButton7";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton9.Text = "toolStripButton9";
+            this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
             // 
             // richTextBox1
             // 
@@ -289,50 +427,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton5.Text = "toolStripButton5";
-            // 
-            // szerkesztésToolStripMenuItem
-            // 
-            this.szerkesztésToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.betűstílusToolStripMenuItem,
-            this.betűszínToolStripMenuItem,
-            this.visszavonásToolStripMenuItem,
-            this.ktgukjToolStripMenuItem});
-            this.szerkesztésToolStripMenuItem.Name = "szerkesztésToolStripMenuItem";
-            this.szerkesztésToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.szerkesztésToolStripMenuItem.Text = "Szerkesztés";
-            // 
-            // betűstílusToolStripMenuItem
-            // 
-            this.betűstílusToolStripMenuItem.Name = "betűstílusToolStripMenuItem";
-            this.betűstílusToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.betűstílusToolStripMenuItem.Text = "Betűstílus";
-            // 
-            // betűszínToolStripMenuItem
-            // 
-            this.betűszínToolStripMenuItem.Name = "betűszínToolStripMenuItem";
-            this.betűszínToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.betűszínToolStripMenuItem.Text = "Betűszín";
-            // 
-            // visszavonásToolStripMenuItem
-            // 
-            this.visszavonásToolStripMenuItem.Name = "visszavonásToolStripMenuItem";
-            this.visszavonásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.visszavonásToolStripMenuItem.Text = "Visszavonás";
-            // 
-            // ktgukjToolStripMenuItem
-            // 
-            this.ktgukjToolStripMenuItem.Name = "ktgukjToolStripMenuItem";
-            this.ktgukjToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ktgukjToolStripMenuItem.Text = "Ismét";
             // 
             // Form1
             // 
@@ -394,6 +488,14 @@
         private System.Windows.Forms.ToolStripMenuItem betűszínToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visszavonásToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ktgukjToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripMenuItem másolásToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem beillesztésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kivágásToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem összesKijelöléseToolStripMenuItem;
     }
 }
 
