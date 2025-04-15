@@ -6,8 +6,10 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace IKT_projektmunka
 {
@@ -26,23 +28,16 @@ namespace IKT_projektmunka
         //mentés
         private void mentésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Filter = "Szöveges fájl (*.txt)|*.txt|Rich Text File (*.rtf)|*.rtf|Minden fájl (*.*)|*.*";
+            saveFileDialog1.Title = "Fájl mentése";
+            saveFileDialog1.Filter = "Rich Text Format (*.rtf)|*.rtf|Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.DefaultExt = "rtf";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                System.IO.File.WriteAllText(saveFileDialog1.FileName, "Mentett szöveg");
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
             }
         }
-        private void mentésMáskéntToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            saveFileDialog1.Filter = "Minden fájl (*.*)|*.*";
-            saveFileDialog1.FilterIndex = 1;
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                System.IO.File.WriteAllText(saveFileDialog1.FileName, "Mentett szöveg");
-            }
-        }
+        
 
 
         
@@ -51,23 +46,17 @@ namespace IKT_projektmunka
         {
             openFileDialog1.Title = "Fájl megnyitása";
             openFileDialog1.Multiselect = false;
-            openFileDialog1.Filter = "Szöveges fájlok (*.txt)|*.txt|Minden fájl (*.*)|*.*";
+            openFileDialog1.Filter = "Rich Text Format(*.rtf)| *.rtf | Text Files(*.txt) | *.txt | All Files(*.*) | *.* ";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                StreamReader sr = new StreamReader(openFileDialog1.FileName);
-                richTextBox1.Text = sr.ReadToEnd();
-                sr.Close();
+                richTextBox1.LoadFile(openFileDialog1.FileName);
             }
         }
         //kilépés
         private void bezárásToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            Application.Exit();
-        }
-        private void startTextWelperToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+           this.Close();
         }
         //összes törlése
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -175,5 +164,13 @@ namespace IKT_projektmunka
                 richTextBox1.SelectionBackColor = selectedColor;
             }
         }
+        private void startTextWelperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(5000);
+            this.Cursor = Cursors.Default;
+        }
+
+        
     }
 }
