@@ -69,21 +69,6 @@ namespace IKT_projektmunka
         {
             Application.Exit();
         }
-        //betütipusválasztó
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            if (fontDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Font selectedFont = fontDialog1.Font;
-            }
-        }
-        private void betűstílusToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (fontDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Font selectedFont = fontDialog1.Font;
-            }
-        }
         //összes törlése
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
@@ -94,8 +79,16 @@ namespace IKT_projektmunka
         {
             richTextBox1.Copy();
         }
+        private void másolásToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Copy();
+        }
         //beillesztés
         private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Paste();
+        }
+        private void beillesztésToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Paste();
         }
@@ -104,8 +97,16 @@ namespace IKT_projektmunka
         {
             richTextBox1.Cut();
         }
+        private void kivágásToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Cut();
+        }
         //visszalépés
         private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Undo();
+        }
+        private void visszavonásToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Undo();
         }
@@ -114,24 +115,9 @@ namespace IKT_projektmunka
         {
             richTextBox1.Redo();
         }
-
-
-        //betűszín választás
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void ktgukjToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            { 
-                Color selectedColor = colorDialog1.Color;
-                
-            }
-        }
-        private void betűszínToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                Color selectedColor = colorDialog1.Color;
-
-            }
+            richTextBox1.Redo();
         }
 
         //összes kijelölése
@@ -139,6 +125,55 @@ namespace IKT_projektmunka
         {
             richTextBox1.SelectAll();
         }
+        private void összesKijelöléseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
+        }
 
+        //betütipusválasztó
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Font selectedFont = fontDialog1.Font;
+                richTextBox1.SelectionFont = selectedFont;
+            }
+        }
+        private void betűstílusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Font selectedFont = fontDialog1.Font;
+            }
+        }
+
+        //betűszín választás
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            { 
+                Color selectedColor = colorDialog1.Color;
+                richTextBox1.SelectionColor = selectedColor;
+                
+            }
+        }
+        private void betűszínToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Color selectedColor = colorDialog1.Color;
+                richTextBox1.SelectionColor = selectedColor;
+                
+            }
+        }
+
+        private void háttérToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (colorDialog2.ShowDialog() == DialogResult.OK)
+            {
+                Color selectedColor = colorDialog2.Color;
+                richTextBox1.SelectionBackColor = selectedColor;
+            }
+        }
     }
 }
