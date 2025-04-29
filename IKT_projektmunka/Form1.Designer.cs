@@ -244,6 +244,7 @@
             this.onlineSúgóToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.onlineSúgóToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.onlineSúgóToolStripMenuItem.Text = "Online súgó";
+            this.onlineSúgóToolStripMenuItem.Click += new System.EventHandler(this.onlineSúgóToolStripMenuItem_Click);
             // 
             // textWelperSúgóToolStripMenuItem
             // 
@@ -252,6 +253,7 @@
             | System.Windows.Forms.Keys.H)));
             this.textWelperSúgóToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.textWelperSúgóToolStripMenuItem.Text = "Text Welper Súgó";
+            this.textWelperSúgóToolStripMenuItem.Click += new System.EventHandler(this.textWelperSúgóToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -271,7 +273,7 @@
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(32, 426);
+            this.toolStrip1.Size = new System.Drawing.Size(24, 426);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -282,7 +284,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton1.Size = new System.Drawing.Size(21, 20);
             this.toolStripButton1.Text = "Betűtipus";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -302,7 +304,7 @@
             this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
             this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton10.Size = new System.Drawing.Size(21, 20);
             this.toolStripButton10.Text = "Btű Háttérszín";
             this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
@@ -393,6 +395,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(883, 450);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.toolStrip1);

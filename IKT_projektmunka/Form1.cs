@@ -166,7 +166,8 @@ namespace IKT_projektmunka
             }
         }
         private void startTextWelperToolStripMenuItem_Click(object sender, EventArgs e)
-        {   
+        {
+            MessageBox.Show("A Text Welper jelenleg nem eléhető!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             /*
             this.Cursor = Cursors.WaitCursor;
             Thread.Sleep(5000);
@@ -188,6 +189,16 @@ namespace IKT_projektmunka
                 Color selectedColor = colorDialog2.Color;
                 richTextBox1.SelectionBackColor = selectedColor;
             }
+        }
+
+        private void onlineSúgóToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Az online súgól jelenleg nem eléhető!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void textWelperSúgóToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("A súgó használatához először indítsa el a Text Welpert!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
