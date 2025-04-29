@@ -166,7 +166,8 @@ namespace IKT_projektmunka
             }
         }
         private void startTextWelperToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {   
+            /*
             this.Cursor = Cursors.WaitCursor;
             Thread.Sleep(5000);
             this.Cursor = Cursors.Default;
@@ -174,16 +175,10 @@ namespace IKT_projektmunka
             //Thread.Sleep(60000 * 5);
             DialogResult result = MessageBox.Show("A fájlok másolása sikeresen megtörtént! folytatni kívánja?", "Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             if (result == DialogResult.OK) 
-            {
-                using (StreamWriter wr = new StreamWriter("system.log"))
-                {
-                    wr.WriteLine("Nem sikerült hitelesíteni a licencjogokat.");
-                }
-            }
             this.Cursor = Cursors.WaitCursor;
             Thread.Sleep(10000);
             this.Cursor = Cursors.Default;
-            Process.Start("cmd.exe");
+            Process.Start("cmd.exe");*/
         }
 
         private void toolStripButton10_Click(object sender, EventArgs e)
