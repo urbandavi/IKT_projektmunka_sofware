@@ -228,6 +228,7 @@
             this.textWelperSettingsToolStripMenuItem.Name = "textWelperSettingsToolStripMenuItem";
             this.textWelperSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.textWelperSettingsToolStripMenuItem.Text = "Text Welper Settings";
+            this.textWelperSettingsToolStripMenuItem.Click += new System.EventHandler(this.textWelperSettingsToolStripMenuItem_Click);
             // 
             // súgóToolStripMenuItem
             // 

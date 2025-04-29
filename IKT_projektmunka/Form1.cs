@@ -200,5 +200,10 @@ namespace IKT_projektmunka
         {
             MessageBox.Show("A súgó használatához először indítsa el a Text Welpert!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void textWelperSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("A beállítások használatához először indítsa el a Text Welpert!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
