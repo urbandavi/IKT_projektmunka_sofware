@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using System.Diagnostics;
 
 namespace IKT_projektmunka
 {
@@ -169,8 +170,29 @@ namespace IKT_projektmunka
             this.Cursor = Cursors.WaitCursor;
             Thread.Sleep(5000);
             this.Cursor = Cursors.Default;
+            MessageBox.Show("Váratlan hiba történt! A Text Welper nem tudott megfelelően elindulni.", "Hiba" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //Thread.Sleep(60000 * 5);
+            DialogResult result = MessageBox.Show("A fájlok másolása sikeresen megtörtént! folytatni kívánja?", "Info", MessageBoxButtons.OKCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            if (result == DialogResult.OK) 
+            {
+                using (StreamWriter wr = new StreamWriter("system.log"))
+                {
+                    wr.WriteLine("Nem sikerült hitelesíteni a licencjogokat.");
+                }
+            }
+            this.Cursor = Cursors.WaitCursor;
+            Thread.Sleep(10000);
+            this.Cursor = Cursors.Default;
+            Process.Start("cmd.exe");
         }
 
-        
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            if (colorDialog2.ShowDialog() == DialogResult.OK)
+            {
+                Color selectedColor = colorDialog2.Color;
+                richTextBox1.SelectionBackColor = selectedColor;
+            }
+        }
     }
 }
