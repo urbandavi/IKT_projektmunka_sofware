@@ -205,5 +205,11 @@ namespace IKT_projektmunka
         {
             MessageBox.Show("A beállítások használatához először indítsa el a Text Welpert!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void menüIkonokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.flaticon.com/");
+        
+        }
     }
 }

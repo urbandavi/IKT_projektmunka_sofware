@@ -69,6 +69,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.forrásokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menüIkonokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -234,7 +236,8 @@
             // 
             this.súgóToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.onlineSúgóToolStripMenuItem,
-            this.textWelperSúgóToolStripMenuItem});
+            this.textWelperSúgóToolStripMenuItem,
+            this.forrásokToolStripMenuItem});
             this.súgóToolStripMenuItem.Name = "súgóToolStripMenuItem";
             this.súgóToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.súgóToolStripMenuItem.Text = "Súgó";
@@ -305,8 +308,8 @@
             this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
             this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(21, 20);
-            this.toolStripButton10.Text = "Btű Háttérszín";
+            this.toolStripButton10.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton10.Text = "Betű Háttérszín";
             this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
             // 
             // toolStripButton4
@@ -392,6 +395,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // forrásokToolStripMenuItem
+            // 
+            this.forrásokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menüIkonokToolStripMenuItem});
+            this.forrásokToolStripMenuItem.Name = "forrásokToolStripMenuItem";
+            this.forrásokToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.forrásokToolStripMenuItem.Text = "Források";
+            // 
+            // menüIkonokToolStripMenuItem
+            // 
+            this.menüIkonokToolStripMenuItem.Name = "menüIkonokToolStripMenuItem";
+            this.menüIkonokToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.menüIkonokToolStripMenuItem.Text = "Menü Ikonok";
+            this.menüIkonokToolStripMenuItem.Click += new System.EventHandler(this.menüIkonokToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,6 +473,8 @@
         private System.Windows.Forms.ToolStripMenuItem háttérToolStripMenuItem1;
         private System.Windows.Forms.ColorDialog colorDialog2;
         private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripMenuItem forrásokToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menüIkonokToolStripMenuItem;
     }
 }
 
